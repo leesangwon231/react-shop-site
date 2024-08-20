@@ -103,6 +103,15 @@ html,body{
     font-size: 10px;
 }
 
+.heartIcon{
+    display: flex;
+    justify-content: end;
+    margin-top: 10px;
+}
+
+
+
+
 .login-container{
     display: flex;
     flex-direction: column;
