@@ -1,8 +1,17 @@
-import React from 'react'
+import React, {useEffect} from 'react'
+import Card from "./Card";
 
-const ProductAll = () => {
+const ProductAll = ({products}) => {
+
+
+
     return (
-        <div>ProductAll</div>
+        <div className={"main-container"}>
+            {products?.map((product,index) => (
+                <Card key = {index} product = {product}/>
+            ))}
+        </div>
+
     )
 }
 
