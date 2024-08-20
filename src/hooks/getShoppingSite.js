@@ -2,7 +2,7 @@ import { useQuery } from "react-query";
 import axios from "axios";
 
 const fetchAllProducts = () => {
-  return  axios.get("http://localhost:5000/products")
+  return  axios.get("https://my-json-server.typicode.com/leesangwon231/react-shop-site/products")
 }
 
 export const useAllData = () => {
