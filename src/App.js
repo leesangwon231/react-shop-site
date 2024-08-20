@@ -11,7 +11,7 @@ import {useEffect, useState} from "react";
 function App() {
 
     let {data:products,isError,isLoading}  = useAllData();
-
+    const [authenticate,setAuthenticate] = useState(false);
 
 
 
@@ -22,7 +22,7 @@ function App() {
         <Routes>
           <Route path={"/"} element={<ProductAll products = {products}/>}/>
           <Route path={"/product/:id"} element={<ProductDetail/>}/>
-          <Route path={"/login"} element={<Login/>}/>
+          <Route path={"/login"} element={<Login setAuthenticate={setAuthenticate}/>}/>
         </Routes>
     </div>
   );
