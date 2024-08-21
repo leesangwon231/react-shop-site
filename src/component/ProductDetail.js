@@ -31,7 +31,7 @@ const ProductDetail = ({setMyPageDetail,myPageDetail}) => {
 
         setMyPageDetail([...myPageDetail , data]);
 
-        console.log("상품 구매 완료!!")
+        alert("상품 구매 완료!!");
         navigate("/");
 
     }
