@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import {useParams} from "react-router-dom";
+import {Navigate, useNavigate, useParams} from "react-router-dom";
 import {useDetailData} from "../hooks/getProductDetail";
 
 const ProductDetail = ({setMyPageDetail,myPageDetail}) => {
@@ -7,7 +7,7 @@ const ProductDetail = ({setMyPageDetail,myPageDetail}) => {
     const {id} = useParams();
     const {data:detailData} = useDetailData(id);
     const [clickedSize , setclickedSize] = useState();
-
+    const navigate = useNavigate();
     const clickSize = (size) => {
         setclickedSize(size);
     }
@@ -30,6 +30,10 @@ const ProductDetail = ({setMyPageDetail,myPageDetail}) => {
         data["size"] = size;
 
         setMyPageDetail([...myPageDetail , data]);
+
+        console.log("상품 구매 완료!!")
+        navigate("/");
+
     }
 
     return (
