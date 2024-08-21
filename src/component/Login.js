@@ -5,10 +5,15 @@ const Login = ({setAuthenticate}) => {
     const navigate = useNavigate();
     const formSubmit= (event) => {
         event.preventDefault();
-        console.log(event.target[0].value);
-        console.log(event.target[1].value);
-        setAuthenticate(true);
-        navigate("/");
+        if(event.target[0].value === "werggf" && event.target[1].value === "1234"){
+            setAuthenticate(true);
+            navigate("/");
+        }else{
+            alert("존재 하지 않는 회원 입니다.")
+            return false;
+        }
+
+
     }
     return (
         <div className={"login-container"}>

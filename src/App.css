@@ -14,7 +14,7 @@ html,body{
 
 
 .header{
-    height: 200px;
+    height: 135px;
     width: 100%;
 }
 
@@ -30,6 +30,10 @@ html,body{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.nav-section img{
+    cursor: pointer;
 }
 
 .menu-area{
@@ -92,7 +96,7 @@ html,body{
 
 .card img:hover{
     transform: scale(1.1);
-
+    cursor : pointer;
 }
 
 .card:hover #title {
@@ -187,3 +191,89 @@ html,body{
 
 
 
+
+
+
+
+
+
+.detail-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+
+.detail-container img{
+    height: 600px;
+}
+
+
+
+.product-detail-info{
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 200px;
+    padding: 30px;
+}
+.product-detail-info h1{
+    margin-bottom: 60px;
+}
+.product-detail-info h2{
+    margin-bottom: 30px;
+}
+
+
+
+
+.size_wrapper{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.size_card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 50px;
+    text-align: center;
+    border: white solid 1px;
+    margin-right: 10px;
+    margin-left: 10px;
+    background-color: lightcoral;
+    color: white;
+    border-radius: 10px;
+
+}
+
+.size_card.active{
+    background-color: white;
+    border: lightcoral 1px solid;
+    color: lightcoral;
+    border-radius: 10px;
+}
+
+.detail_button{
+    display: flex;
+    background-color: lightcoral;
+    margin-top: 80px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border-radius: 10px;
+    width: 100%;
+}
+
+.detail_button:hover{
+    transition: 1s;
+    background-color: white;
+    color: lightcoral;
+    border: lightcoral 1px solid;
+}

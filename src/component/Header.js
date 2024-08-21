@@ -13,6 +13,10 @@ const Header = () => {
         navigate("/login")
     }
 
+    const onClickMain = () => {
+        navigate("/")
+    }
+
     return (
         <div className={"header"}>
             <div className={"login-button"} onClick={onClickLogin}>
@@ -20,14 +24,16 @@ const Header = () => {
                 <div>로그인</div>
             </div>
             <div className={"nav-section"}>
-                <img width={"100px"} src={"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOSWOhkrtrLKgKz35SOCEsZV-v2q_yeKpMgw&s"}/>
+                <img width={"100px"}
+                     src={"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOSWOhkrtrLKgKz35SOCEsZV-v2q_yeKpMgw&s"}
+                     onClick={onClickMain}/>
             </div>
             <div className={"menu-area"}>
-                    <ul className={"menu-list"}>
-                        {menuList.map((menu,index) => (
-                            <li key={index}>{menu}</li>
-                        ))}
-                    </ul>
+                <ul className={"menu-list"}>
+                    {menuList.map((menu, index) => (
+                        <li key={index}>{menu}</li>
+                    ))}
+                </ul>
                 <div className={"search-area"}>
                     <FontAwesomeIcon icon={faSearch}/>
                     <input type={"text"} placeholder={"제품검색"}></input>
