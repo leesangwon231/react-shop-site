@@ -11,14 +11,17 @@ import {useSearchProduct} from "./hooks/searchProducts";
 function App() {
 
 
-    const {data}  = useAllData();
+
     const [products , setProducts] = useState(null);
     const [keyword , setKeyword] = useState(null);
     const [authenticate,setAuthenticate] = useState(false);
     const [myPageDetail ,setMyPageDetail] = useState([]);
 
 
+    const {data}  = useAllData();
     const { data: searchResults } = useSearchProduct(keyword);
+
+    console.log(data);
 
     useEffect(() => {
         if (keyword) {
