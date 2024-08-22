@@ -6,17 +6,34 @@ import Header from "./component/Header";
 import {useAllData} from "./hooks/getShoppingSite";
 import {useEffect, useState} from "react";
 import PrivateRouter from "./component/PrivateRouter";
+import {useSearchProduct} from "./hooks/searchProducts";
 
 function App() {
 
-    let {data:products}  = useAllData();
+
+    const {data}  = useAllData();
+    const [products , setProducts] = useState(null);
+    const [keyword , setKeyword] = useState(null);
     const [authenticate,setAuthenticate] = useState(false);
     const [myPageDetail ,setMyPageDetail] = useState([]);
+
+
+    const { data: searchResults } = useSearchProduct(keyword);
+
+    useEffect(() => {
+        if (keyword) {
+            setProducts(searchResults);
+        } else {
+            setProducts(data);
+        }
+    }, [data, keyword, searchResults]);
 
 
     useEffect(() => {
         console.log("내가산 물품들!!!! =====> ", myPageDetail);
     }, [myPageDetail]);
+
+
 
     const clickHeart = (event,index) => {
         console.log(event);
@@ -24,10 +41,12 @@ function App() {
 
     }
 
+
+
     return (
 
     <div>
-        <Header/>
+        <Header setKeyword = {setKeyword}/>
         <Routes>
           <Route path={"/"} element={<ProductAll products = {products} clickHeart = {clickHeart}/>}/>
           <Route path={"/product/:id"} element={<PrivateRouter authenticate={authenticate} setMyPageDetail={setMyPageDetail} myPageDetail={myPageDetail}/>}/>

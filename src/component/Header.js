@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faUser} from '@fortawesome/free-regular-svg-icons'
 import {faSearch} from "@fortawesome/free-solid-svg-icons";
 import {useNavigate} from "react-router-dom";
-const Header = () => {
+const Header = ({setKeyword}) => {
 
     const menuList = ["남성","여성","남성1","여성1"]
 
@@ -15,6 +15,10 @@ const Header = () => {
 
     const onClickMain = () => {
         navigate("/")
+    }
+
+    const getSearchkeyword = (event) => {
+        setKeyword(event.target.value);
     }
 
     return (
@@ -36,7 +40,7 @@ const Header = () => {
                 </ul>
                 <div className={"search-area"}>
                     <FontAwesomeIcon icon={faSearch}/>
-                    <input type={"text"} placeholder={"제품검색"}></input>
+                    <input id={"searchText"} type={"text"} placeholder={"제품검색"} onKeyUp={(event) => getSearchkeyword(event)}></input>
                 </div>
             </div>
         </div>
