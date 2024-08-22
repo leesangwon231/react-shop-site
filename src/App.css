@@ -277,3 +277,60 @@ html,body{
     color: lightcoral;
     border: lightcoral 1px solid;
 }
+
+
+
+
+.menu-bar{
+    background-color: lightcoral;
+    position: fixed;
+    top: 0;
+    width: 300px;
+    height: 100%;
+    transition: 2s;
+    display: flex;
+    flex-direction: column;
+    transform: translateX(-275px);
+
+
+}
+
+.menu-bar svg{
+    position: absolute;
+    left: 280px;
+    top: 2px
+}
+
+.menu-bar.menu-active{
+    transform: translateX(0px);
+}
+
+.shopping-area{
+    margin: 50px 25px;
+    border : white solid 1px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.shopping-area h1{
+    font-size: 15px;
+}
+
+.shopping-area img{
+    width: 100px;
+}
+
+.myPageCard{
+    margin: 20px;
+    background-color: white;
+    display: flex;
+    width: 230px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.myPageCardInfo{
+    margin-left: 20px;
+}

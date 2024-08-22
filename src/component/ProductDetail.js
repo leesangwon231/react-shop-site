@@ -12,7 +12,7 @@ const ProductDetail = ({setMyPageDetail,myPageDetail}) => {
         setclickedSize(size);
     }
 
-    const clickSubmitDetail = (event) => {
+    const clickSubmitDetail = (event) => { // 걍 detail Data 넘겨도 된다.... ()=> 로 막아두고
         event.preventDefault();
         if(document.getElementsByClassName("size_card active").length === 0){
             alert("사이즈를 선택해 주세요");
@@ -23,24 +23,27 @@ const ProductDetail = ({setMyPageDetail,myPageDetail}) => {
         let title = document.getElementById("title").innerText;
         let price = document.getElementById("price").innerText.split(" ")[1];
         let size = document.getElementsByClassName("size_card active")[0].innerHTML
+        let img = document.getElementById("img").src;
 
         data["id"] = id;
         data["title"] = title;
         data["price"] = price;
         data["size"] = size;
+        data["img"] = img;
+
 
         setMyPageDetail([...myPageDetail , data]);
 
-        alert("상품 구매 완료!!");
+        alert("상품 구매 완료!! 메뉴바에서 확인 하세요");
         navigate("/");
 
     }
 
     return (
         <div className={"detail-container"}>
-            <img src={detailData?.img}/>
+            <img id={"img"} src={detailData?.img}/>
             <div className={"product-detail-info"}>
-                <form onSubmit={(event) => clickSubmitDetail(event)}>
+                <form onSubmit={(event) => clickSubmitDetail(event)}>  
                     <h1 id={"title"}>{detailData?.title}</h1>
                     <h2 id={"price"}>₩ {detailData?.price}</h2>
                     <h2>SIZE</h2>

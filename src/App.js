@@ -11,7 +11,7 @@ import {useSearchProduct} from "./hooks/searchProducts";
 function App() {
 
 
-
+    const [menuFlag ,setMenuFlag] = useState(false);
     const [products , setProducts] = useState(null);
     const [keyword , setKeyword] = useState(null);
     const [authenticate,setAuthenticate] = useState(false);
@@ -28,7 +28,7 @@ function App() {
         } else {
             setProducts(data);
         }
-    }, [data,products, keyword, searchResults, heart]);
+    }, [data,products, keyword, searchResults]);
 
 
     useEffect(() => {
@@ -47,7 +47,7 @@ function App() {
     return (
 
     <div>
-        <Header setKeyword = {setKeyword}/>
+        <Header setKeyword = {setKeyword} setMenuFlag={setMenuFlag} menuFlag = {menuFlag} myPageDetail={myPageDetail}/>
         <Routes>
           <Route path={"/"} element={<ProductAll products = {products} clickHeart = {clickHeart} heart={heart} /> }/>
           <Route path={"/product/:id"} element={<PrivateRouter authenticate={authenticate} setMyPageDetail={setMyPageDetail} myPageDetail={myPageDetail}/>}/>

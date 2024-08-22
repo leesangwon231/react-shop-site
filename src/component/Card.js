@@ -37,7 +37,7 @@ const Card = ({product,clickHeart,index,heart}) => {
       </div>
         <h1>{product.choice ? "choice product" : ""}</h1>
         <h1 id={"title"}>{product.title}</h1>
-        <h1>{product.price}</h1>
+        <h1>₩{product.price}</h1>
         <h1>{product.choice ? "new product" : ""}</h1>
     </div>
   );
