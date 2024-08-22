@@ -7,8 +7,7 @@
       "price":99900,
       "choice":true,
       "new":true,
-      "size":["S","M","L"],
-      "heart" : false
+      "size":["S","M","L"]
     },
     {
       "id":1,
@@ -17,8 +16,7 @@
       "price":29900,
       "choice":true,
       "new":true,
-      "size":["S","M","L"],
-      "heart" : false
+      "size":["S","M","L"]
 
     },
     {
@@ -28,8 +26,7 @@
       "price":39900,
       "choice":false,
       "new":true,
-      "size":["S","M","L"],
-      "heart" : false
+      "size":["S","M","L"]
 
     },
     {
@@ -39,8 +36,7 @@
       "price":39900,
       "choice":false,
       "new":true,
-      "size":["S","M","L"],
-      "heart" : false
+      "size":["S","M","L"]
 
     },
     {
@@ -50,8 +46,7 @@
       "price":29900,
       "choice":true,
       "new":false,
-      "size":["S","M","L"],
-      "heart" : false
+      "size":["S","M","L"]
 
     },
     {
@@ -61,8 +56,7 @@
       "price":39900,
       "choice":false,
       "new":false,
-      "size":["S","M","L"],
-      "heart" : false
+      "size":["S","M","L"]
 
     },
     {
@@ -72,8 +66,7 @@
       "price":39900,
       "choice":true,
       "new":false,
-      "size":["S","M","L"],
-      "heart" : false
+      "size":["S","M","L"]
 
     },
     {
@@ -83,8 +76,7 @@
       "price":99900,
       "choice":false,
       "new":true,
-      "size":["S","M","L"],
-      "heart" : false
+      "size":["S","M","L"]
 
     },
     {
@@ -94,8 +86,7 @@
       "price":14900,
       "choice":true,
       "new":true,
-      "size":["S","M","L"],
-      "heart" : false
+      "size":["S","M","L"]
 
     },
     {
@@ -105,8 +96,7 @@
       "price":19900,
       "choice":false,
       "new":true,
-      "size":["S","M","L"],
-      "heart" : false
+      "size":["S","M","L"]
 
     },
     {
@@ -116,8 +106,7 @@
       "price":19900,
       "choice":true,
       "new":false,
-      "size":["S","M","L"],
-      "heart" : false
+      "size":["S","M","L"]
 
     },
     {
@@ -127,8 +116,7 @@
       "price":29900,
       "choice":true,
       "new":true,
-      "size":["S","M","L"],
-      "heart" : false
+      "size":["S","M","L"]
 
     },
     {
@@ -138,8 +126,7 @@
       "price":14900,
       "choice":true,
       "new":true,
-      "size":["S","M","L"],
-      "heart" : false
+      "size":["S","M","L"]
 
     },
     {
@@ -149,8 +136,7 @@
       "price":29900,
       "choice":false,
       "new":false,
-      "size":["S","M","L"],
-      "heart" : false
+      "size":["S","M","L"]
 
     }
   ]

@@ -16,12 +16,11 @@ function App() {
     const [keyword , setKeyword] = useState(null);
     const [authenticate,setAuthenticate] = useState(false);
     const [myPageDetail ,setMyPageDetail] = useState([]);
-
+    const [heart,setHeart] = useState([]);
 
     const {data}  = useAllData();
     const { data: searchResults } = useSearchProduct(keyword);
 
-    console.log(data);
 
     useEffect(() => {
         if (keyword) {
@@ -29,7 +28,7 @@ function App() {
         } else {
             setProducts(data);
         }
-    }, [data, keyword, searchResults]);
+    }, [data,products, keyword, searchResults, heart]);
 
 
     useEffect(() => {
@@ -37,21 +36,20 @@ function App() {
     }, [myPageDetail]);
 
 
-
     const clickHeart = (event,index) => {
-        console.log(event);
-        console.log(index);
-
+        if (heart.includes(index)) {
+            setHeart(heart.filter((data) => data !== index));
+        } else {
+            setHeart([...heart, index]);
+        }
     }
-
-
 
     return (
 
     <div>
         <Header setKeyword = {setKeyword}/>
         <Routes>
-          <Route path={"/"} element={<ProductAll products = {products} clickHeart = {clickHeart}/>}/>
+          <Route path={"/"} element={<ProductAll products = {products} clickHeart = {clickHeart} heart={heart} /> }/>
           <Route path={"/product/:id"} element={<PrivateRouter authenticate={authenticate} setMyPageDetail={setMyPageDetail} myPageDetail={myPageDetail}/>}/>
           <Route path={"/login"} element={<Login setAuthenticate={setAuthenticate}/>}/>
         </Routes>

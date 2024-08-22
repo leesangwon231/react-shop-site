@@ -18,6 +18,8 @@ const Header = ({setKeyword}) => {
     }
 
     const getSearchkeyword = (event) => {
+
+
         setKeyword(event.target.value);
     }
 
