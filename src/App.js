@@ -47,7 +47,7 @@ function App() {
     return (
 
     <div>
-        <Header setKeyword = {setKeyword} setMenuFlag={setMenuFlag} menuFlag = {menuFlag} myPageDetail={myPageDetail}/>
+        <Header setKeyword = {setKeyword} setMenuFlag={setMenuFlag} menuFlag = {menuFlag} myPageDetail={myPageDetail} setAuthenticate={setAuthenticate} authenticate={authenticate}/>
         <Routes>
           <Route path={"/"} element={<ProductAll products = {products} clickHeart = {clickHeart} heart={heart} /> }/>
           <Route path={"/product/:id"} element={<PrivateRouter authenticate={authenticate} setMyPageDetail={setMyPageDetail} myPageDetail={myPageDetail}/>}/>

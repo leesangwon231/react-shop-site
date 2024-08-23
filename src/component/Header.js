@@ -4,13 +4,16 @@ import {faUser} from '@fortawesome/free-regular-svg-icons'
 import {faSearch,faBars} from "@fortawesome/free-solid-svg-icons";
 import {useNavigate} from "react-router-dom";
 import MyPageCard from "./MyPageCard";
-const Header = ({setKeyword,setMenuFlag,menuFlag,myPageDetail}) => {
+const Header = ({setKeyword,setMenuFlag,menuFlag,myPageDetail,authenticate,setAuthenticate}) => {
 
     const menuList = ["남성","여성","남성1","여성1"]
 
     const navigate = useNavigate();
 
     const onClickLogin = () => {
+        if(setAuthenticate){
+           setAuthenticate(false);
+        }
         navigate("/login")
     }
 
@@ -41,7 +44,7 @@ const Header = ({setKeyword,setMenuFlag,menuFlag,myPageDetail}) => {
             </div>
             <div className={"login-button"} >
                 <div><FontAwesomeIcon icon={faUser}/></div>
-                <div onClick={onClickLogin}>로그인</div>
+                <div onClick={onClickLogin}>{authenticate ? "로그아웃" : "로그인"}</div>
             </div>
             <div className={"nav-section"}>
                 <img width={"100px"}
